@@ -37,4 +37,4 @@ const PostList = ({ posts, title }) => {
   );
 };
 
-export default ThoughtList;
+export default PostList;
