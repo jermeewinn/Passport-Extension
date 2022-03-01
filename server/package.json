@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon"
   },
   "keywords": [],
   "author": "",
@@ -17,5 +18,8 @@
     "graphql": "^16.3.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.2.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
