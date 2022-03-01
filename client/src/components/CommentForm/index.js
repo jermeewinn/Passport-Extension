@@ -31,4 +31,33 @@ const CommentForm = ({ postId }) => {
             console.error(e);
         }
     };
-}
+
+    return(
+        <div>
+            <p className={`m-0 ${characterCount === 300 || error ? 'text-error': ''}`}>
+                Character Count: {characterCount}/300
+                {error && <span className='m1-2'>Something went wrong...</span>}
+            </p>    
+            <form 
+                className='flex-row justify-center justify-space-between-md align-stretch'
+                onSubmit={handleFormSubmit}
+            >
+                {/* textarea for comment */}
+                <textarea
+                    placeholder='Leave a comment to this post...'
+                    value={commentBody}
+                    className='form-input col-12 col-md-9'
+                    onChange={handleChange}>
+                </textarea>
+                {/* submit button for comment textarea */}
+                <button className='btn col-12 col-md-3' type='submit'>
+                    Submit
+                </button>
+            </form>
+
+            {error && <div>Something went wrong...</div>}
+        </div>
+    );
+};
+
+export default CommentForm;
