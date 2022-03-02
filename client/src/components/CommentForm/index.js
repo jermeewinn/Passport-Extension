@@ -5,7 +5,7 @@ import { ADD_COMMENT } from '../../utils/mutations';
 const CommentForm = ({ postId }) => {
     const [commentBody, setBody] = useState('');
     const [characterCount, setCharacterCount] = useState(0);
-    const [addReaction, { error }] = useMutation(ADD_COMMENT);
+    const [addComment, { error }] = useMutation(ADD_COMMENT);
 
     // update state based on form input changes
     const handleChange = (event) => {

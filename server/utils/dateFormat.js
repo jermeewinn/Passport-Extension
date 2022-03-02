@@ -38,16 +38,17 @@ module.exports = (
     };
 
     const dateObj = new Date(timestamp);
+    console.log(dateObj)
     const formattedMonth = months[dateObj.getMonth()];
 
     const dayOfMonth = dateSuffix 
         ? addDateSuffix(dateObj.getDate()) 
         : dateObj.getDate();
 
-    const year = dateObj.detFullYear();
+    const year = dateObj.getFullYear();
     let hour = 
         dateObj.getHours() > 12
-            ? Math.floor(dataObj.getHours() - 12)
+            ? Math.floor(dateObj.getHours() - 12)
             : dateObj.getHours();
     if (hour === 0) {
         hour = 12;
