@@ -75,6 +75,7 @@ const PostForm = () => {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=${apiKey}`);
         const data = await response.json();
         console.log(data);
+        let weatherIcon = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
         var today = new Date();
         var date = (today.getMonth()+1)+'/'+today.getDate()+'/'+today.getFullYear()
         var dateTime = new Date(data.dt * 1000);;
@@ -85,7 +86,7 @@ const PostForm = () => {
         var newTime = hours + ':' + minutes;
         setTime(`${newTime},`);
         setDay(` ${date}`);
-        setWeather(`${data.main.temp} °C`);
+        setWeather(`${data.main.temp} °C  ${weatherIcon}`);
         setCountry(`, ${data.sys.country}`);
 
     };
