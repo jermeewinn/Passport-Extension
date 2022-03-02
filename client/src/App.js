@@ -17,6 +17,7 @@ import NoMatch from './pages/NoMatch';
 import SinglePost from './pages/SinglePost';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
+import 'bulma/css/bulma.min.css';
 
 const httpLink = createHttpLink({
   uri: '/graphql',

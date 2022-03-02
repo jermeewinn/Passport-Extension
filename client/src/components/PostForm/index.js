@@ -4,6 +4,7 @@ import { useMutation } from '@apollo/client';
 import { ADD_POST } from '../../utils/mutations';
 import { QUERY_POSTS, QUERY_ME } from '../../utils/queries';
 
+const googleAPIKey = "AIzaSyCiCjXRFR_Let9O68u_HE8yUEhGVFZRcUs";
 const PostForm = () => {
   const [postText, setText] = useState('');
   const [characterCount, setCharacterCount] = useState(0);
@@ -55,29 +56,88 @@ const PostForm = () => {
       console.error(e);
     }
   };
+  
+    const apiKey = "d0a06a26fc67ad3dcc286204f13f1864";
+    //here is where we get the input onsubmit
+    const [city, setCity] = useState("");
+    const [country, setCountry] = useState("");
+    const [weather, setWeather] = useState(null);
+    const [Day, setDay] = useState(null);
+    const [time, setTime] = useState(null);
 
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      
+      getData(city);
+    };
+      // we will use async/await to fetch this data
+      async function getData() {
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=${apiKey}`);
+        const data = await response.json();
+        console.log(data);
+        var today = new Date();
+        var date = (today.getMonth()+1)+'/'+today.getDate()+'/'+today.getFullYear()
+        var dateTime = new Date(data.dt * 1000);;
+        // Hours part from the timestamp
+        var hours = dateTime.getHours();
+        // Minutes part from the timestamp
+        var minutes = dateTime.getMinutes();
+        var newTime = hours + ':' + minutes;
+        setTime(newTime);
+        setDay(date);
+        setWeather(`${data.main.temp} °C`);
+        setCountry(data.sys.country);
+
+    };
   return (
-    <div>
-      <p
-        className={`m-0 ${characterCount === 280 || error ? 'text-error' : ''}`}
-      >
-        Character Count: {characterCount}/280
-        {error && <span className="ml-2">Something went wrong...</span>}
-      </p>
-      <form
-        className="flex-row justify-center justify-space-between-md align-stretch"
-        onSubmit={handleFormSubmit}
-      >
-        <textarea
-          placeholder="Here's a new post..."
-          value={postText}
-          className="form-input col-12 col-md-9"
-          onChange={handleChange}
-        ></textarea>
-        <button className="btn col-12 col-md-3" type="submit">
-          Submit
-        </button>
-      </form>
+    <div className="flex-container">
+      <div>
+        <p
+          className={`m-0 ${characterCount === 280 || error ? 'text-error' : ''}`}
+        >
+          Character Count: {characterCount}/280
+          {error && <span className="ml-2">Something went wrong...</span>}
+        </p>
+        <form 
+          className="flex-row justify-center justify-space-between-md align-stretch"
+          onSubmit={handleFormSubmit}
+        >
+          <div className="new-post-form">
+            <textarea
+              placeholder="How was your trip to..."
+              value={postText}
+              className="form-input col-12 col-md-9"
+              onChange={handleChange}
+            ></textarea>
+          </div>
+          <button className="button is-info" type="submit">
+            Submit
+          </button>
+        </form>
+        <div className="timezone-converter">
+          <h2>City Stats</h2>
+          <form onSubmit={handleSubmit}>
+            <label id="display" className="label">
+              City:
+              <input
+                className="input is-info"
+                type="text"
+                name="city"
+                value={city}
+                onChange={(e) => {
+                  setCity(e.target.value);
+                }}
+              />
+            </label>
+            <input className="button is-info is-focused" type="submit" value="Submit" />
+          </form>
+          <div className="label">
+            <p>{city}  {country}</p>
+            <p>{weather}</p>
+            <p>{time}  {Day}</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
