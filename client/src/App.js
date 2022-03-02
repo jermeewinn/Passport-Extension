@@ -45,13 +45,18 @@ function App() {
           <Header />
           <div className="container">
             <Routes>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/login" component={Login} />
-              <Route exact path="/signup" component={Signup} />
-              <Route exact path="/profile/:username?" component={Profile} />
-              <Route exact path="/post/:id" component={SinglePost} />
-
-              <Route component={NoMatch} />
+            <Route exact path="/" element={<Home/>} />
+              {/* <Route exact path="/" component={Home} /> */}
+              <Route exact path="/login" element={<Login/>} />
+              {/* <Route exact path="/login" component={Login} /> */}
+              <Route exact path="/signup" element={<Signup/>} />
+              {/* <Route exact path="/signup" component={Signup} /> */}
+              <Route exact path="/profile/:username?" element={<Profile/>} />
+              {/* <Route exact path="/profile/:username?" component={Profile} /> */}
+              <Route exact path="/" element={<SinglePost/>} />
+              {/* <Route exact path="/post/:id" component={SinglePost} /> */}
+              <Route element={<NoMatch/>} />
+              {/* <Route component={NoMatch} /> */}
             </Routes>
           </div>
           <Footer />
