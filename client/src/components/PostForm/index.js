@@ -83,60 +83,95 @@ const PostForm = () => {
         // Minutes part from the timestamp
         var minutes = dateTime.getMinutes();
         var newTime = hours + ':' + minutes;
-        setTime(newTime);
-        setDay(date);
+        setTime(`${newTime},`);
+        setDay(` ${date}`);
         setWeather(`${data.main.temp} °C`);
-        setCountry(data.sys.country);
+        setCountry(`, ${data.sys.country}`);
 
     };
   return (
     <div className="flex-container">
       <div>
-        <p
-          className={`m-0 ${characterCount === 280 || error ? 'text-error' : ''}`}
-        >
-          Character Count: {characterCount}/280
-          {error && <span className="ml-2">Something went wrong...</span>}
-        </p>
-        <form 
-          className="flex-row justify-center justify-space-between-md align-stretch"
-          onSubmit={handleFormSubmit}
-        >
+        <div className="column"></div>
           <div className="new-post-form">
-            <textarea
-              placeholder="How was your trip to..."
-              value={postText}
-              className="form-input col-12 col-md-9"
-              onChange={handleChange}
-            ></textarea>
-          </div>
-          <button className="button is-info" type="submit">
-            Submit
-          </button>
-        </form>
-        <div className="timezone-converter">
-          <h2>City Stats</h2>
-          <form onSubmit={handleSubmit}>
-            <label id="display" className="label">
-              City:
-              <input
-                className="input is-info"
-                type="text"
-                name="city"
-                value={city}
-                onChange={(e) => {
-                  setCity(e.target.value);
-                }}
-              />
-            </label>
-            <input className="button is-info is-focused" type="submit" value="Submit" />
+            <h2>New Post</h2>
+            <section className="candy-stripe">
+              <ul>
+                <li className="stripe1"></li>
+                <li className="stripe1"></li>
+                <li className="stripe1"></li>
+                <li className="stripe1"></li>
+                <li className="stripe1"></li>
+                <li className="stripe1"></li>
+                <li className="stripe1"></li>
+                <li className="stripe1"></li>
+                <li className="stripe1"></li>
+                <li className="stripe1"></li>
+              </ul>
+            </section>
+          <p
+            className={`m-0 ${characterCount === 280 || error ? 'text-error' : ''}`}
+          >
+            Character Count: {characterCount}/280
+            {error && <span className="ml-2">Something went wrong...</span>}
+          </p>
+          <form 
+            className="flex-row justify-center justify-space-between-md align-stretch"
+            onSubmit={handleFormSubmit}
+          >
+            <div >
+              <textarea
+                placeholder="How was your trip to..."
+                value={postText}
+                className="form-input col-12 col-md-9"
+                onChange={handleChange}
+              ></textarea>
+            </div>
+            <button id="specific-button" className="button is-info" type="submit">
+              Submit
+            </button>
           </form>
-          <div className="label">
-            <p>{city}  {country}</p>
-            <p>{weather}</p>
-            <p>{time}  {Day}</p>
-          </div>
         </div>
+        </div>
+        <div className="column">
+          <div className="timezone-converter">
+            <h2>City Stats</h2>
+            <section className="candy-stripe">
+              <ul>
+                <li className="stripe1"></li>
+                <li className="stripe1"></li>
+                <li className="stripe1"></li>
+                <li className="stripe1"></li>
+                <li className="stripe1"></li>
+                <li className="stripe1"></li>
+                <li className="stripe1"></li>
+                <li className="stripe1"></li>
+                <li className="stripe1"></li>
+                <li className="stripe1"></li>
+              </ul>
+            </section>
+            <form onSubmit={handleSubmit}>
+              <label id="display" >
+                City:
+                <input
+                  className="input is-info"
+                  type="text"
+                  name="city"
+                  value={city}
+                  onChange={(e) => {
+                    setCity(e.target.value);
+                  }}
+                />
+              </label>
+              <input id="city-submit"className="button is-info is-focused" type="submit" value="Submit" />
+            </form>
+            <div className="label">
+              <p>{city}  {country}</p>
+              <p>{weather}</p>
+              <p>{time}  {Day}</p>
+            </div>
+          </div>
+
       </div>
     </div>
   );

@@ -4,7 +4,6 @@ const Footer = () => {
     return(
         <footer className='w-100 mt-auto bg-secondary p-4'>
             <div className='footer-container'>
-            <div className='container'>
                 &copy;{new Date().getFullYear()} by Kaylin Boyle, Jeremy Huynh, & Andrew Yun
             </div>
             <div id="target-bottom">
@@ -19,7 +18,6 @@ const Footer = () => {
                 </a>
             </div>
             
-        </div>
         </footer>
     );
 };
