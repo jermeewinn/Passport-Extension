@@ -360,3 +360,30 @@ textarea{
 #specific-button{
  
 } */
+.card form{
+  display: flex;
+  flex-direction: column;
+  background-color: #FCD7AD;
+
+}
+
+main.flex-row{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+h4{
+  display:flex;
+  justify-content: center;
+  color: #383F51; 
+  font-family: 'Raleway',sans-serif; 
+  font-size: 62px;  
+  line-height: 72px; 
+  margin: 0 0 24px; 
+  text-align: center; 
+  text-transform: uppercase;
+  /* padding: 150px; */
+  text-decoration: none;
+  font-weight: 800;
+}
