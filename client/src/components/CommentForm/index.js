@@ -20,7 +20,7 @@ const CommentForm = ({ postId }) => {
         event.preventDefault();
 
         try {
-            await ADD_COMMENT({
+            await addComment({
                 variables: { commentBody, postId },
             });
 
