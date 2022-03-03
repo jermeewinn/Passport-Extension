@@ -63,7 +63,6 @@ div.timezone-converter h2{
   line-height: 72px; margin: 0 0 24px; 
   text-align: center; 
   text-transform: uppercase;
-  margin-bottom: -5px;
 }
 /* Blog feed css content */
 div.new-post-form h2{
@@ -337,7 +336,7 @@ textarea{
   justify-content: center;
   margin-left: 10px;
   margin-right: 10px;
-  margin-bottom: 10px;
+
 }
 .new-post-form form{
   display: flex;
@@ -411,4 +410,8 @@ h4{
 #donate-page{
   background-color: #FCD7AD;
   border: 10px solid #9cc6dd;
+}
+
+.new-post-form{
+  margin-top: 40px;
 }

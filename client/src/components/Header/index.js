@@ -38,7 +38,7 @@ const Header = () => {
           <Link className="button is-info" to="/donate">Donations</Link>
           {Auth.loggedIn() ? (
             <>
-              <Link className="button is-info" to="/profile">My Account</Link>
+              {/* <Link className="button is-info" to="/profile">My Account</Link> */}
               <a className="button is-info" href="/" onClick={logout}>
                 Logout
               </a>
