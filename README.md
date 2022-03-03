@@ -4,3 +4,9 @@ Passport-Extension is a travel blogging application built with a MERN structure,
 
 With Passport-Extension, there are a number of features one can use to optimize their travel experience, such as a time-zone-converter API and the ability to interact with other travelers based on their destination.
 
+## Table of Contents
+[Installation](#installation)
+[Licenses](#licenses)
+[Technologies Used](#technologies used)
+[Demo GIF](#demo_gif)
+
