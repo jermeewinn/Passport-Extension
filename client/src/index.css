@@ -30,21 +30,21 @@ div.flex-container div.column{
   
 }
 div.past-posts{
-  border: 5px solid #B5E2FA;
+  border: 5px solid #9cc6dd;
   background-color: #FCD7AD;
   margin-bottom: 20px;
 }
 div.liked-posts{
-  border: 5px solid #B5E2FA;
+  border: 5px solid #9cc6dd;
   background-color: #FCD7AD;
   margin-bottom: 20px;
 }
 div.blog-feed{
-  border: 5px solid #B5E2FA;
+  border: 5px solid #9cc6dd;
   background-color: #FCD7AD;
 }
 .new-post-form{
-  border: 5px solid #B5E2FA;
+  border: 5px solid #9cc6dd;
   background-color: #FCD7AD;
   margin-bottom: 20px;
   display: flex;
@@ -52,7 +52,7 @@ div.blog-feed{
   
 }
 div.timezone-converter{
-  border: 5px solid #B5E2FA;
+  border: 5px solid #9cc6dd;
   background-color: #FCD7AD;
 }
 div.timezone-converter h2{
@@ -98,7 +98,16 @@ div.liked-posts h1{
   margin-bottom: -5px;
 }
 
-
+h2{
+  
+  color: #383F51; 
+  font-family: 'Raleway',sans-serif; 
+  font-size: 30px; font-weight: 800; 
+  line-height: 72px; margin: 0 0 24px; 
+  text-align: center; 
+  text-transform: uppercase;
+  margin-bottom: -5px;
+}
 
 div.blog-feed{
   background-color: #FCD7AD;
@@ -111,7 +120,7 @@ div.blog-feed{
           clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 .stripe1:nth-child(even) {
-  background-color: #B5E2FA;
+  background-color: #9cc6dd;
   width: 90%;
 }
 
@@ -131,8 +140,8 @@ nav a{
 
 header{
 
-  border-top: 10px solid #82DDF0;
-  border-bottom: 10px solid #82DDF0;
+  border-top: 10px solid #da5830;
+  border-bottom: 10px solid #da5830;
   background-color:rgba(233, 234, 243, 0.489);
 
 }
@@ -235,7 +244,7 @@ ul.flex-row{
   }
 }
 .stripe:nth-child(even) {
-  background-color: #5296A5;
+  background-color: #9cc6dd;
   width: 150%;
 }
 
@@ -273,7 +282,7 @@ form.signup-form{
 }
 
 form.signup-form button{
-  background-color: #82DDF0;
+  background-color: #9cc6dd;
   margin-top: 10px;
 
   
@@ -313,7 +322,7 @@ section.footer div.p h3{
 
 .label{
   align-items: center;
-  background-color: #B5E2FA;
+  background-color: #9cc6dd;
   margin-top: 5px;
   
 
@@ -360,10 +369,15 @@ textarea{
 #specific-button{
  
 } */
+.card {
+
+  border: 25px solid #9cc6dd;
+
+}
 .card form{
   display: flex;
   flex-direction: column;
-  background-color: #FCD7AD;
+ 
 
 }
 
@@ -386,4 +400,15 @@ h4{
   /* padding: 150px; */
   text-decoration: none;
   font-weight: 800;
+}
+#donate-button{
+  display: flex;
+  justify-content:center;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  
+}
+#donate-page{
+  background-color: #FCD7AD;
+  border: 10px solid #9cc6dd;
 }

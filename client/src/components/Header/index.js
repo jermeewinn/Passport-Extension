@@ -35,6 +35,7 @@ const Header = () => {
             <img id="plane" src="https://www.kindpng.com/picc/m/5-57688_plane-png-image-airplane-clip-art-transparent-background.png" className="image" alt="plane logo" />
         </div>
         <nav className="text-center">
+          <Link className="button is-info" to="/donate">Donations</Link>
           {Auth.loggedIn() ? (
             <>
               <Link className="button is-info" to="/profile">My Account</Link>

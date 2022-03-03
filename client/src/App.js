@@ -17,6 +17,7 @@ import NoMatch from './pages/NoMatch';
 import SinglePost from './pages/SinglePost';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
+import Donate from './pages/Donate';
 import 'bulma/css/bulma.min.css';
 
 const httpLink = createHttpLink({
@@ -52,10 +53,13 @@ function App() {
               {/* <Route exact path="/login" component={Login} /> */}
               <Route exact path="/signup" element={<Signup/>} />
               {/* <Route exact path="/signup" component={Signup} /> */}
-              <Route exact path="/profile/:username?" element={<Profile/>} />
+              {/* <Route exact path="/profile/:username?" element={<Profile/>} /> */}
               {/* <Route exact path="/profile/:username?" component={Profile} /> */}
+              <Route exact path="/profile/" element={<Profile/>} />
               <Route exact path="/" element={<SinglePost/>} />
+              
               {/* <Route exact path="/post/:id" component={SinglePost} /> */}
+              <Route exact path="/donate" element={<Donate/>} />
               <Route element={<NoMatch/>} />
               {/* <Route component={NoMatch} /> */}
             </Routes>
