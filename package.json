@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/jermeewinn/Passport-Extension#readme",
   "dependencies": {
+    "bulma": "^0.9.3",
     "concurrently": "^7.0.0"
   }
 }

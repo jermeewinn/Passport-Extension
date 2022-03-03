@@ -8,6 +8,22 @@ const PostList = ({ posts, title }) => {
 
   return (
     <div>
+      <div className="new-post-form">
+        <h2> Blog Feed </h2>
+        <section className="candy-stripe">
+          <ul>
+            <li className="stripe1"></li>
+            <li className="stripe1"></li>
+            <li className="stripe1"></li>
+            <li className="stripe1"></li>
+            <li className="stripe1"></li>
+            <li className="stripe1"></li>
+            <li className="stripe1"></li>
+            <li className="stripe1"></li>
+            <li className="stripe1"></li>
+            <li className="stripe1"></li>
+          </ul>
+        </section>
       <h3>{title}</h3>
       {posts &&
         posts.map(post => (
@@ -33,6 +49,7 @@ const PostList = ({ posts, title }) => {
             </div>
           </div>
         ))}
+    </div>
     </div>
   );
 };

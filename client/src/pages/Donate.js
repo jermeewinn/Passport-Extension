@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 // import {Elements} from '@stripe/react-stripe-js';
 // import {loadStripe} from '@stripe/stripe-js'
-const Profile = () => {
-///dont forgtto change link in app.js
+const Donate = () => {
+
 return(
     <main id="donate-page" className="flex-row">
         <div className=".timezone-converter">
@@ -16,5 +16,5 @@ return(
 )
 };
 
-export default Profile;
+export default Donate;
 

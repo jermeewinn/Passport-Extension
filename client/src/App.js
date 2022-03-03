@@ -17,6 +17,8 @@ import NoMatch from './pages/NoMatch';
 import SinglePost from './pages/SinglePost';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
+import Donate from './pages/Donate';
+import 'bulma/css/bulma.min.css';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -55,6 +57,7 @@ function App() {
               {/* <Route exact path="/profile/:username?" component={Profile} /> */}
               <Route exact path="/post/:id" element={<SinglePost/>} />
               {/* <Route exact path="/post/:id" component={SinglePost} /> */}
+              <Route exact path="/donate" element={<Donate/>} />
               <Route element={<NoMatch/>} />
               {/* <Route component={NoMatch} /> */}
             </Routes>
