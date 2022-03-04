@@ -5,11 +5,23 @@ Passport-Extension is a travel blogging application built with a MERN structure,
 With Passport-Extension, there are a number of features one can use to optimize their travel experience, such as a time-zone-converter API and the ability to interact with other travelers based on their destination.
 
 ## Table of Contents
+- [Installation](#installation)
 - [Licenses](#licenses)
 - [Technologies Used](#technologies_used)
 - [Screenshot](#screenshot)
 - [Deployed Link](#deployed_link)
 - [Collaborators](#collaborators)
+
+## Installation
+### Clone the repository:
+- $git clone git@github.com:jermeewinn/Passport-Extension.git
+
+### Install npm dependencies:
+- $npm install dependencies in root, client, & server directories
+
+### Open Localhost:
+- Type 'npm run develop' in the root to start the API server and the front end
+- Open a web browser at [localhost:3000](localhost:3000)
 
 ## Licenses
 
